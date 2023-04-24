@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, Boolean, String
+from sqlalchemy.sql.expression import null
 from .database import Base
 
 class Post(Base):
