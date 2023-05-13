@@ -14,6 +14,7 @@ class PostCreate(PostBase):
 class Post(PostBase):
     id: int
     created_at: datetime
+    owner_id: int
     #pydantic needs to convert it to the dictionary
     class Config:
         orm_mode = True
