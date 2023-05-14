@@ -1,8 +1,26 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import psycopg2
+from psycopg2.extras import RealDictCursor
+import time
 
 SQLALCHEMY_DATABASE_URL = 'postgresql://andrewicho:password123@localhost/fastapi'
+# while True:
+
+#     try:
+#         conn = psycopg2.connect(host='localhost', database='fastapi',
+#                                 user='andrewicho', cursor_factory=RealDictCursor)
+#         cursor = conn.cursor()
+
+#         print("Database connection was successful!")
+#         break
+#         # data1 = cursor.execute('SELECT * FROM posts;')
+#         # print(data1)
+#     except Exception as error:
+#         print("Connecting to database failed")
+#         print("error was:", Exception)
+#         time.sleep(2)
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
